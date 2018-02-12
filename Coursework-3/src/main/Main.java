@@ -111,7 +111,7 @@ public class Main {
             }
             if (choice == 4) {
                 if(user.isEmpty()){
-                    System.out.println("---------------Create users first to see the list-----------------------");
+                    System.out.println("Create users first to see the list");
                 }
                 else{
                     System.out.println("-------------------------------  LIST OF USERS  --------------------------");
