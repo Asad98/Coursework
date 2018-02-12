@@ -10,13 +10,13 @@ package main;
  * @author asayy
  */
 public class BankAcc {
-    private long accountNo;                                                                     //Class attributes
+    private long accountNo;                                                                     //Class attributes 
     private double accountBalance;
     private User user;
     public BankAcc(long accountNo, double accountBalance)                                       //Contructor 
     {
         this.accountNo = accountNo;
-        this.accountBalance = accountBalance;   
+        this.accountBalance = accountBalance;  
     }
     public long getAccountNo()
     {
@@ -26,12 +26,12 @@ public class BankAcc {
     {
         return this.accountBalance;
     }   
-    public void deposit(double value,String name)                                               
+    public synchronized void deposit(double value,String name)                                               
     {
         System.out.println("The user-"+name+" deposits an amount of "+value);
         accountBalance+=value;
     }
-    public void withdraw(double value,String name)
+    public synchronized void withdraw(double value,String name)
     {
         System.out.println("The user-"+name+" withdraws an amount of "+Math.abs(value));
         accountBalance-=value;
