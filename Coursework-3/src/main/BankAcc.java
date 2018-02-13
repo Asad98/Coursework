@@ -26,12 +26,12 @@ public class BankAcc {
     {
         return this.accountBalance;
     }   
-    public void deposit(double value,String name)                                               
+    public synchronized void deposit(double value,String name)                                               
     {
         System.out.println("The user-"+name+" deposits an amount of "+value);
         accountBalance+=value;
     }
-    public void withdraw(double value,String name)
+    public synchronized void withdraw(double value,String name)
     {
         System.out.println("The user-"+name+" withdraws an amount of "+Math.abs(value));
         accountBalance-=value;
