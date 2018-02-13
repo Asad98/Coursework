@@ -103,6 +103,7 @@ public class Main {
                 if (bankacc == null) {
                     System.out.println("Please create a bank account with an account balance and account number to continue");
                 } else {
+                    System.out.println("Enter choice");
                     for (int j = 0; j < i; j++) {
                         user.get(j).start();                                                                                    //starting all threads
                     }
@@ -131,7 +132,9 @@ public class Main {
             if (choice == 6) {
                 System.exit(0);                                                                                             //exiting the program
             }
+            else{
+                System.out.println("Invalid option selected please try again!");
+            }
         }
     }
-
 }
